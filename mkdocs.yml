@@ -1,0 +1,9 @@
+site_name: mock-up
+nav:
+    - Home: index.md
+    - About: about_en.md
+theme:
+    name: mkdocs
+    locale: en
+    color_mode: auto
+    nav_style: light
