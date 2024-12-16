@@ -7,3 +7,5 @@ theme:
     locale: en
     color_mode: auto
     nav_style: light
+    user_color_mode_toggle: false
+plugins: []
