@@ -2,6 +2,8 @@
 
 [CFFDRS-NG](https://github.com/nrcan-cfs-fire/cffdrs-ng/tree/main)
 
+[FWI (Python)](https://github.com/nrcan-cfs-fire/cffdrs-ng/blob/main/NG_FWI.py)
+
 [About](about_en.md)
 
 ## Wildland Fire Suppression
