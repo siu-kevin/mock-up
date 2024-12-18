@@ -5,7 +5,7 @@ nav:
 theme:
     name: mkdocs
     locale: en
-    color_mode: auto
-    nav_style: light
+    color_mode: dark
+    nav_style: dark
     user_color_mode_toggle: false
 plugins: []
