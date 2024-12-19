@@ -1,0 +1,17 @@
+body {
+    background-color: #2f3329
+}
+
+a {
+    color: #ff5e17!important;
+    font-size: 0.93em;
+    font-weight: bold;
+}
+
+a:hover {
+    color: red!important;
+  }
+
+.bs-sidebar .nav {
+    background-color: black
+}

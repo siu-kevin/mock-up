@@ -8,4 +8,5 @@ theme:
     color_mode: dark
     nav_style: dark
     user_color_mode_toggle: false
+extra_css: [style.css]
 plugins: []
