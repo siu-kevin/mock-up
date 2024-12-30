@@ -1,11 +1,31 @@
+/* CFFDRS Colours
+Grey: #2f3329
+Orange: #ff5e17 */
+
 body {
-    background-color: #2f3329
+    background-color: #2f3329;
+}
+
+.navbar {
+    background-color: black!important;
+    border-style: solid;
+    border-width: 0px 2px 2px 2px;
+    border-color: #ff5e17;
+    border-radius: 7px;
+}
+
+hr {
+    border-color: #ff5e17!important;
 }
 
 a {
-    color: #ff5e17!important;
+    color: #ff5e17;
     font-size: 0.93em;
     font-weight: bold;
+}
+
+.navbar a, .bs-sidebar a {
+    color: #ff5e17;
 }
 
 a:hover {
@@ -13,5 +33,12 @@ a:hover {
   }
 
 .bs-sidebar .nav {
-    background-color: black
+    background-color: black;
+}
+
+.bs-sidebar {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ff5e17;
+    border-radius: 7px;
 }

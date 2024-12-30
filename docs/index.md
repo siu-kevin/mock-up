@@ -1,9 +1,5 @@
 # Welcome
 
-[CFFDRS-NG](https://github.com/nrcan-cfs-fire/cffdrs-ng/tree/main)
-
-[FWI (Python)](https://github.com/nrcan-cfs-fire/cffdrs-ng/blob/main/NG_FWI.py)
-
 [About](about_en.md)
 
 ## Wildland Fire Suppression
@@ -16,9 +12,6 @@ The Fighting and Managing Wildfires in a Changing Climate program provides fundi
 
 [Forest Fires](https://natural-resources.canada.ca/our-natural-resources/forests/wildland-fires-insects-disturbances/forest-fires/13143)
 
-## Project layout
+## GitHub
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+[CFFDRS-NG](https://github.com/nrcan-cfs-fire/cffdrs-ng/tree/main) (in C, Python, and R)
