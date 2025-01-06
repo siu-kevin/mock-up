@@ -2,9 +2,25 @@
 Grey: #2f3329
 Orange: #ff5e17 */
 
+/* Homepage (removing sidebar and rebalancing*/
+
+body.homepage>div.container>div.row>div.col-md-3 {
+    display: none;
+}
+
+body.homepage>div.container>div.row>div.col-md-9 {
+    margin-left: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+/* Theming */
+
 body {
     background-color: #2f3329;
 }
+
+/* Page Header (Site Navigation) */
 
 .navbar {
     background-color: black!important;
@@ -14,9 +30,7 @@ body {
     border-radius: 7px;
 }
 
-hr {
-    border-color: #ff5e17!important;
-}
+/* Links */
 
 a {
     color: #ff5e17;
@@ -32,6 +46,8 @@ a:hover {
     color: red!important;
   }
 
+/* Sidebar (Table of Contents) */
+
 .bs-sidebar .nav {
     background-color: black;
 }
@@ -41,4 +57,10 @@ a:hover {
     border-width: 2px;
     border-color: #ff5e17;
     border-radius: 7px;
+}
+
+/* Markdown Separator (---) */
+
+hr {
+    border-color: #ff5e17!important;
 }
