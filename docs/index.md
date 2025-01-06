@@ -8,8 +8,6 @@
     alt="CFFDRS logo">
 </img>
 
----
-
 <img 
     style="display: block; 
            margin-left: auto;
@@ -23,8 +21,9 @@
 [User Guide]: user-guide/README.md
 
 <div class="text-center">
-<a href="about_en" class="btn btn-dark" role="button">English</a>
-<a href="about_fr" class="btn btn-dark" role="button">French</a>
+	<button class="btn btn-dark" onclick="location.href='home'">English</button>
+	&emsp;
+	<button class="btn btn-dark" disabled>Français<br>(sous construction)</button>
 </div>
 
-</br>
+<br>
