@@ -1,6 +1,6 @@
 site_name: MOCK-UP
 nav:
-    - Home: index.md
+    - Home: home.md
     - About: about_en.md
 theme:
     name: mkdocs
