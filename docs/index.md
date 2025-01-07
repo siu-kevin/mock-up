@@ -1,9 +1,11 @@
+<br>
 
 <img 
     style="display: block; 
            margin-left: auto;
            margin-right: auto;
-           width: 300px;"
+           width: 300px;
+           border-radius: 14px;"
     src="./img/CFFDRS.png" 
     alt="CFFDRS logo">
 </img>

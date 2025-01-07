@@ -1,10 +1,15 @@
 /* CFFDRS Colours
 Grey: #2f3329
-Orange: #ff5e17 */
+Orange: #ff5e17
+Light: #f4efed */
 
-/* Homepage (removing sidebar and rebalancing*/
+/* Homepage (removing sidebar, top navbar, and footer) */
 
-body.homepage>div.container>div.row>div.col-md-3 {
+body.homepage>div.container>div.row>div.col-md-3, body.homepage>footer {
+    display: none;
+}
+
+body.homepage ul.nav.navbar-nav {
     display: none;
 }
 
@@ -16,8 +21,17 @@ body.homepage>div.container>div.row>div.col-md-9 {
 
 /* Theming */
 
+/* div, p {
+    color: #2f3329
+} */
+
 body {
     background-color: #2f3329;
+}
+
+img {
+    background-color: transparent!important;
+    border: none!important;
 }
 
 /* Page Header (Site Navigation) */
@@ -30,6 +44,16 @@ body {
     border-radius: 7px;
 }
 
+.navbar-brand {
+    color: #ff5e17!important
+}
+
+/* Remove <-Previous Next-> */
+
+ul.nav.navbar-nav.ms-md-auto {
+  display: none;
+}
+
 /* Links */
 
 a {
@@ -39,7 +63,11 @@ a {
 }
 
 .navbar a, .bs-sidebar a {
-    color: #ff5e17;
+    color: #dfd7ca;
+}
+
+.navbar a.nav-link.active, a.nav-link.active {
+    color: red;
 }
 
 a:hover {
@@ -63,4 +91,13 @@ a:hover {
 
 hr {
     border-color: #ff5e17!important;
+}
+
+/* Buttons */
+
+button.btn, button.btn:hover {
+    color: #dfd7ca;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ff5e17;
 }
