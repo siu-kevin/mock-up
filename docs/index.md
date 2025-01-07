@@ -3,7 +3,7 @@
     style="display: block; 
            margin-left: auto;
            margin-right: auto;
-           width: 30%;"
+           width: 300px;"
     src="./img/CFFDRS.png" 
     alt="CFFDRS logo">
 </img>
@@ -12,7 +12,7 @@
     style="display: block; 
            margin-left: auto;
            margin-right: auto;
-           width: 20%;"
+           width: 200px;"
     src="./img/CFS_fire-research_emblem.png" 
     alt="CFS Fire Research emblem">
 </img>
