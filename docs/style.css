@@ -21,9 +21,9 @@ body.homepage>div.container>div.row>div.col-md-9 {
 
 /* Theming */
 
-/* div, p {
-    color: #2f3329
-} */
+div {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
 body {
     background-color: #2f3329;
@@ -45,7 +45,7 @@ img {
 }
 
 .navbar-brand {
-    color: #ff5e17!important
+    color: #ff5e17!important;
 }
 
 /* Remove <-Previous Next-> */
