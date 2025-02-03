@@ -3,9 +3,8 @@ nav:
     - Home: home.md
     - Documentation: documentation.md
     - Tutorial: tutorial.md
-    - Code Repository: code_repo.md
     - Other Data: other.md
-    - French: about_en.md
+    - French Example: about_en.md
 theme:
     name: mkdocs
     custom_dir: custom_theme/
