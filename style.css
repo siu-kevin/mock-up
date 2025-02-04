@@ -58,9 +58,9 @@ ul.nav.navbar-nav.ms-md-auto {
 
 a {
     color: #ff5e17;
-    font-size: 0.93em;
-    font-weight: bold;
 }
+    /* font-size: 0.93em;
+    font-weight: bold; */
 
 .navbar a, .bs-sidebar a {
     color: #dfd7ca;
