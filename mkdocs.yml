@@ -1,9 +1,10 @@
 site_name: MOCK-UP
 nav:
     - Home: home.md
-    - Documentation: documentation.md
+    - Code: code.md
     - Tutorial: tutorial.md
-    - Other Data: other.md
+    - Other: other.md
+    - Contact: contact.md
     - French Example: about_en.md
 theme:
     name: mkdocs

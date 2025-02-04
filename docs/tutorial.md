@@ -1,5 +1,3 @@
-# Tutorial
-
 ## Requirements
 
 ## Download
