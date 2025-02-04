@@ -25,6 +25,14 @@ div {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+p, li {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 34px;
+}
+
 body {
     background-color: #2f3329;
 }
@@ -48,6 +56,13 @@ img {
     color: #ff5e17!important;
 }
 
+.navbar a.nav-link {
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding-left: 16px!important;
+}
+
 /* Remove <-Previous Next-> */
 
 ul.nav.navbar-nav.ms-md-auto {
@@ -66,8 +81,12 @@ a {
     color: #dfd7ca;
 }
 
-.navbar a.nav-link.active, a.nav-link.active {
+.navbar a.nav-link.active {
     color: red;
+}
+
+div.col-md-3 a.nav-link {
+    font-weight:normal!important;
 }
 
 a:hover {
