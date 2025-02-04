@@ -5,7 +5,6 @@ nav:
     - Tutorial: tutorial.md
     - Other: other.md
     - Contact: contact.md
-    - French Example: about_en.md
 theme:
     name: mkdocs
     custom_dir: custom_theme/
