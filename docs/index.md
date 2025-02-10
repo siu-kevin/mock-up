@@ -25,7 +25,7 @@
 <div class="text-center">
 	<button class="btn btn-dark" onclick="location.href='home'">English</button>
 	&emsp;
-	<button class="btn btn-dark" disabled>Français<br>(sous construction)</button>
+	<button class="btn btn-dark" onclick="location.href='https://siu-kevin.github.io/maquette/accueil'">Français</button>
 </div>
 
 <br>
