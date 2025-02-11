@@ -3,7 +3,7 @@ nav:
     - Home: home.md
     - Code: code.md
     - Tutorial: tutorial.md
-    - Other: other.md
+    - Resources: resources.md
     - Contact: contact.md
     - Français: https://siu-kevin.github.io/maquette/accueil
 theme:
@@ -14,3 +14,5 @@ theme:
     nav_style: dark
     user_color_mode_toggle: false
 extra_css: [style.css]
+plugins:
+    - search

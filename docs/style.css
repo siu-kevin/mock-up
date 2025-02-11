@@ -65,7 +65,7 @@ img {
 
 /* Remove <-Previous Next-> */
 
-ul.nav.navbar-nav.ms-md-auto {
+ul.nav.navbar-nav.ms-md-auto li:nth-child(n+2) {
   display: none;
 }
 
