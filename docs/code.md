@@ -4,6 +4,12 @@ The [cffdrs-ng GitHub repository](https://github.com/nrcan-cfs-fire/cffdrs-ng/tr
 
 ## Documentation
 
-Code and technical documentation related to the cffdrs-ng code repository. Information includes details on files needed from the repository to run each progamming language.
+Code and technical documentation related to the cffdrs-ng code repository. Information includes details on files needed from the repository to run each programming language.
 
 Note, while some links to the current CFFDRS-1992 and the new CFFDRS-2025 can be found here, more information and publications regarding current and historical CFFDRS documentation can be found on the [NRCan Open S&T Repository (OSTR)](https://ostrnrcan-dostrncan.canada.ca/home).
+
+#### `NG_FWI`
+
+#### `make_hourly`
+
+## License
