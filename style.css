@@ -64,7 +64,7 @@ img {
 }
 
 .navbar li:last-child a {
-    color: #325BAD
+    color: #325BAD;
 }
 
 /* Remove <-Previous Next-> */
