@@ -11,7 +11,7 @@
 </img>
 
 <img 
-    style="display: block; 
+    style="display: block;
            margin-left: auto;
            margin-right: auto;
            width: 200px;"

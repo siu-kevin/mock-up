@@ -2,7 +2,7 @@ site_name: MOCK-UP
 nav:
     - Home: home.md
     - Code: code.md
-    - Tutorial: tutorial.md
+    - Tutorials: tutorials.md
     - Resources: resources.md
     - Contact: contact.md
     - Français: https://siu-kevin.github.io/maquette/accueil
