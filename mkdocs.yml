@@ -6,8 +6,9 @@ nav:
     - Resources: resources.md
     - Contact: contact.md
     - Français: https://siu-kevin.github.io/maquette/accueil
-not_in_nav:
+not_in_nav: |
     index.md
+    contact/*
 theme:
     name: mkdocs
     custom_dir: custom_theme/
