@@ -80,14 +80,6 @@ html {
     padding-left: 16px!important;
 }
 
-.navbar li:last-child a {
-    color: #6684c1;
-}
-
-.navbar-nav.ms-md-auto a {
-    color: #E3D6C9!important;
-}
-
 /* Remove <-Previous Next-> */
 
 /* ul.nav.navbar-nav.ms-md-auto li:nth-child(n+2) {
