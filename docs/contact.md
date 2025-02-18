@@ -61,3 +61,11 @@ Forest Fire Research Scientist
 **Daniel Thompson** (he, him | il, lui)    
 Forest Fire Research Scientist  
 [daniel.thompson@nrcan-rncan.gc.ca](mailto:daniel.thompson@NRCan-RNCan.gc.ca)  
+
+**Derek Van Der Kamp**  
+Research Scientist  
+[derek.vanderkamp@nrcan-rncan.gc.ca](mailto:Derek.VanDerKamp@NRCan-RNCan.gc.ca)  
+
+**Mike Wotton**  
+Forest Fire Research Scientist  
+[mike.wotton@daniels.utoronto.ca](mailto:mike.wotton@daniels.utoronto.ca)  
