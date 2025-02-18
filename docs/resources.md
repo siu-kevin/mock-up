@@ -6,7 +6,7 @@
 ## Reports
 [Next Generation CFFDRS (NG-CFFDRS)](https://ostrnrcan-dostrncan.canada.ca/handle/1845/245411)
 
-## Webpages
+## Other
 
 Canadian Forest Fire Danger Rating System (CFFDRS)
 

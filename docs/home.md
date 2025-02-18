@@ -10,7 +10,9 @@ This website is intended to:
 
 For those unfamiliar with the CFFDRS, read more about the system at the [Government of Canada CFFDRS page](https://natural-resources.canada.ca/our-natural-resources/forests/wildland-fires-insects-disturbances/canadian-forest-fire-danger-rating-system/14470). For official information regarding wildfires in Canada, visit the [Government of Canada wildfire pages](https://natural-resources.canada.ca/our-natural-resources/forests/wildland-fires-insects-disturbances/17598).
 
+Note, while some links to the current CFFDRS1992 and the new CFFDRS2025 can be found here, more information and publications regarding current and historical CFFDRS documentation can be found on the [NRCan Open S&T Repository (OSTR)](https://ostrnrcan-dostrncan.canada.ca/home).
 
 ## Announcements
 
-January 2025: The NG-CFFDRS Fire Weather Index (FWI) System module is available for users to test. Release of the other modules of the CFFDRS (e.g., FBP System, FMS, and FOP System) is ongoing.
+### January 2025
+The NG-CFFDRS Fire Weather Index (FWI) System module is available for users to test. Release of the other modules of the CFFDRS (e.g. FBP System, FMS, and FOP System) is ongoing.
