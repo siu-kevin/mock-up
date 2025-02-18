@@ -101,12 +101,140 @@
                     <div class="col-md-9" role="main">
 
 <h2 id="repository">Repository</h2>
-<p>The <a href="https://github.com/nrcan-cfs-fire/cffdrs-ng/tree/main">cffdrs-ng GitHub repository</a> contains the up-to-date code for the CFFDRS-2025 modules in three programming languages: R, C, and Python. All three languages contain the same equations and perform the same tasks, the choice is yours depending on your system requirement.</p>
+<p>The <a href="https://github.com/nrcan-cfs-fire/cffdrs-ng/tree/main">cffdrs-ng GitHub repository</a> contains the up-to-date code for the CFFDRS2025 modules in three programming languages: R, C, and Python. All three languages contain the same equations and perform the same tasks, the choice is yours depending on your system requirement.</p>
+<h3 id="fire-weather-index-2025-fwi2025">Fire Weather Index 2025 (FWI2025)</h3>
+<p>All code related to next generation CFFDRS development can be found on the <a href="https://github.com/nrcan-cfs-fire/cffdrs-ng/tree/main">cffdrs-ng GitHub repository</a>.</p>
+<p>For each programming language, two scripts are required to generate FWI2025 outputs: </p>
+<ol>
+<li>
+<p>NG_FWI : Holds the functions and equations for generating FWI2025 outputs. (<strong>NG_FWI.r</strong>, <strong>NG_FWI.py</strong>, <strong>NG_FWI.c</strong>) </p>
+</li>
+<li>
+<p>util : Includes basic functions that are not part of FWI2025 equations, but generate intermediate information for the calculation of the FWI2025 components (e.g., time of sunrise and sunset, number of sunlight hours).  This script also includes the process to generate the daily summary output. (<strong>util.r</strong>, <strong>util.py</strong>, <strong>util.c</strong>, <strong>util.h</strong>) </p>
+</li>
+</ol>
+<p>For example, to use Python to generate FWI2025 outputs, you will need <strong>NG_FWI.py</strong> and <strong>util.py</strong>. </p>
+<p>NOTE:  Each language has library or package dependencies.  These must be installed prior to running NG_FWI.</p>
+<p>R : lubridate and data.table </p>
+<p>Python : datetime, logging, math, numpy, pandas, os.path, sys </p>
+<p>C : stdlib.h, stdbool.h, string.h</p>
 <h2 id="documentation">Documentation</h2>
-<p>Code and technical documentation related to the cffdrs-ng code repository. Information includes details on files needed from the repository to run each programming language.</p>
-<p>Note, while some links to the current CFFDRS-1992 and the new CFFDRS-2025 can be found here, more information and publications regarding current and historical CFFDRS documentation can be found on the <a href="https://ostrnrcan-dostrncan.canada.ca/home">NRCan Open S&amp;T Repository (OSTR)</a>.</p>
-<h3 id="download">Download</h3>
+<p>The following resource describes the files and requirements to generate outputs for the next generation Fire Weather Index System (herein referred to as FWI2025). </p>
+<p>FWI2025 is part of a larger program to update the Canadian Forest Fire Danger Rating system (CFFDRS), and is available in three different programming languages: R, Python and C.  All three languages produce the same outputs, choose the language that suits your needs. </p>
+<p>Below describes the files, inputs, formats, and outputs in a general way for all three languages, any deviations for a specific language will be noted. </p>
+<p>FWI2025 code was originally written and tested using data tables and comma-separated value (.csv) files as inputs, as a result the output generates simple data tables that can then be exported.  Users can configure the input and output file types to fit their individual data streams.   </p>
+<p>The <a href="tutorial/#how-to-calculate-hourly-fwi-the-new-fwi2025">Tutorial page</a> includes steps to run the code with a publicly available test dataset.</p>
+<p>Note on terms:</p>
+<ul>
+<li>The Fire Weather Index System calculations were originally designed to be calculated using data recorded at local <em>weather stations</em>.  As a result, descriptions below reference weather station data as input.  In reality, any weather data that provides a representative estimate of weather as per the standard parameters required for FWI System input can be used (e.g. gridded data, forecast data, etc.), see the <a href="https://ostrnrcan-dostrncan.canada.ca/handle/1845/219568">Weather Guide</a> for a description of weather data input standards for the FWI System. </li>
+</ul>
 <h3 id="input-parameters">Input Parameters</h3>
+<p>FWI2025 inputs include hourly weather variables and an estimate of curing.  To read in detail on the inputs to the FWI System, <a href="">go here</a>.     </p>
+<p>The column headers and data structure of the input data are as follows:</p>
+<p><code>id</code> : Weather station identifier, a unique number for the station, text or number.<br />
+<code>lat</code> : Latitude. Location of weather station, decimal degrees (double precision).<br />
+<code>long</code> : Longitude. Location of weather station, decimal degrees (double precision).<br />
+<code>yr</code> : Year of weather station reading, number YYYY.<br />
+<code>mon</code> : Month of weather station reading, number M or MM (must be consistent throughout the dataset).<br />
+<code>day</code> : Day of weather station reading, number DD or D (must be consistent throughout the dataset).<br />
+<code>hr</code> : Hour of weather station reading, number in military time (0-23).<br />
+<code>temp</code> : Temperature in Celcius, number.<br />
+<code>rh</code> : Relative humidity in percent, number (0-100).<br />
+<code>ws</code> : Wind speed in km/hr., number.<br />
+<code>prec</code> : Precipitation (rain) measured in millimeters (mm), number.<br />
+<code>solrad</code> : Solar Radiation measured in kw/m2 (kilowatts per meter squared) for grassland codes, number.  OPTIONAL input, FWI2025 will generate based on default method. (<a href="">read more about solar radiation sensors and minimum requirements</a>)<br />
+<code>percent_cured</code> : Percent Cured of grasses in open grassland, measured in percent for grassland codes, number (0-100). OPTIONAL input, FWI2025 will generate based on default method.   </p>
+<p>In addition to the weather variables, the function to generate hourly FWI2025 outputs requires the timezone where the weather station is located and the start-up value for the moisture codes (e.g. FFMC of 85, DMC of 6 and DC of 15). See the next section below to see where they are used. </p>
+<p>The column headers can be lower case or upper case, the output format is set to upper case.</p>
+<h3 id="calculating-fwi-system-components">Calculating FWI System components</h3>
+<p>The function in the NG_FWI file is built to generate FWI System outputs one station at a time but can accommodate a properly formatted input for multiple stations in the R and Python version. Except for the C version that requires input of a single year for a given station. </p>
+<p>The function to generate FWI2025 outputs can be found within the NG_FWI file look like this: </p>
+<p>R : <code>hFWI(df_wx, timezone, old ffmc, old dmc, old dc)</code></p>
+<ul>
+<li>df_wx = data frame or formatted table (can have multiple years and stations, needs to be temporally sequential during a given year).</li>
+<li>timezone = timezone in which the weather station is located as the number of offset hours from UTC (e.g. for stations in Central Standard time the timezone is set to -6). </li>
+<li>old dmc = the start-up value of the duff moisture code (e.g. 6, this is the default) </li>
+<li>old dc = the start-up value of the drought code (e.g. 15, this is the default) </li>
+</ul>
+<p>Python : <code>hFWI(df_wx, ffmc_old=85, dmc_old=6, dc_old=15, silent=False)</code></p>
+<ul>
+<li>df_wx = data frame or formatted table (can have multiple years and stations, needs to be                                          temporally sequential during a given year) </li>
+<li>timezone = timezone in which the weather station is located. </li>
+<li>ffmc_old = the startup value of the fine fuel moisture code (e.g. 85, this is the default) </li>
+<li>dmc_old = the start-up value of the duff moisture code (e.g. 6, this is the default) </li>
+<li>dc_old = the start-up value of the drought code (e.g. 15, this is the default) </li>
+<li>silent = print progress messages to monitor script. True or False, False by default.   </li>
+</ul>
+<p>.C : <code></code></p>
+<p>The C version can be run from command line with the following arguments in order: </p>
+<p>local GMToffset: timezone in which the weather station is located. </p>
+<p>starting FFMC: the startup value of the fine fuel moisture code (e.g. 85) </p>
+<p>starting DMC: the start-up value of the duff moisture code (e.g. 6) </p>
+<p>starting DC: the start-up value of the drought code (e.g. 15) </p>
+<p>input file: name of .csv file containing data for a single station over the course of a year </p>
+<p>output file:  name of the file to output results into</p>
+<h3 id="output-parameters">Output Parameters</h3>
+<p>Columns are added to the input data table, and a second summary data table is generated. The following output columns that are appended to the hourly weather data table: </p>
+<p><code>timestamp</code> : date and time of weather and FWI variable. Timestamp YYYY-MM-DD HH:MM:SS. (not in C)<br />
+<code>date</code> : YYYY-MM-DD Date type (without hh:mm:ss). (not in C)<br />
+<code>sunrise</code> : Time of sunrise based on the latitude, longitude, and date (decimal time). (not in C)<br />
+<code>sunset</code> : Time of sunset based on the latitude, longitude, and date (decimal time). (not in C)<br />
+<code>sunlight_hours</code> : Number of hours between sunrise and sunset (decimal time). (not in C)<br />
+<code>solrad</code> : Solar Radiation measured in kw/m2 (kilowatts per meter squared) for grassland codes, generated automatically if missing from input (number). (needs to be calculated using make_inputs.c if not given)<br />
+<code>percent_cured</code> : percent of cured (dead) grass fuels in grasslands, generated automatically if missing from input.  Used exclusively in the Grassland calculations.  Percentage as number (0-100). (needs to be calculated using make_inputs.c if not given)<br />
+<code>grass_fuel_load</code> : The standard grass fuel load is built into the Python and R code, 0.35kg/m2.  (needs to be calculated using make_inputs.c if not given, generates a column with the standard value)<br />
+<code>ffmc</code> : Fine Fuel Moisture Code (number).<br />
+<code>dmc</code> : Duff Moisture Code (number).<br />
+<code>dc</code> : Drought Code (number).<br />
+<code>isi</code> : Initial Spread Index (number).<br />
+<code>bui</code> : Buildup Index (number).<br />
+<code>fwi</code> : Fire Weather Index (number).<br />
+<code>dsr</code> : Daily Severity Rating (number).<br />
+<code>gfmc</code> : Grass Fuel Moisture Code, 0-101 similar to FFMC (number).<br />
+<code>gsi</code> : Grassland Spread Index (number).<br />
+<code>gfwi</code> : Grassland Fire Weather Index (number). </p>
+<p>The hourly FWI2025 outputs can be summarized in a variety of ways, and to inspire users to consider what summaries would be relevant to their situation, a function within the ‘util’ file summarizes the day into some basic metrics. </p>
+<p>The function to generate daily summaries : </p>
+<p>R (found within util.r) :  </p>
+<pre><code class="language-r">generate_daily_summaries &lt;- function(hourly_data) {}
+</code></pre>
+<p>where : hourly_data = the output dataframe generated by NG_FWI </p>
+<p>Python (found within util.py) : </p>
+<pre><code class="language-python">def generate_daily_summaries(hourly_data): 
+</code></pre>
+<p>where : hourly_data = the output data generated by NG_FWI </p>
+<p>C (found within util.h) : hourly_data = the output dataframe generated by NG_FWI</p>
+<h3 id="daily-summary-outputs">Daily Summary Outputs</h3>
+<p>Columns are added to the input data table, and a second summary data table is generated. The following are output columns that are appended to the hourly weather data table: </p>
+<p><code>timestamp</code> : date and time of weather and FWI variable. Timestamp YYYY-MM-DD HH:MM:SS. (not in C)<br />
+<code>date</code> : YYYY-MM-DD Date type (without hh:mm:ss). (not in C)<br />
+<code>sunrise</code> : Time of sunrise based on the latitude, longitude, and date (decimal time). (not in C)<br />
+<code>sunset</code> : Time of sunset based on the latitude, longitude, and date (decimal time). (not in C)<br />
+<code>sunlight_hours</code> : Number of hours between sunrise and sunset (decimal time). (not in C)<br />
+<code>solrad</code> : Solar Radiation measured in kw/m2 (kilowatts per meter squared) for grassland codes, generated automatically if missing from input (number). (needs to be calculated using make_inputs.c if not given)<br />
+<code>percent_cured</code> : percent of cured (dead) grass fuels in grasslands, generated automatically if missing from input.  Used exclusively in the Grassland calculations.  Percentage as number (0-100). (needs to be calculated using make_inputs.c if not given)<br />
+<code>grass_fuel_load</code> : The standard grass fuel load is built into the Python and R code, 0.35kg/m2.  (needs to be calculated using make_inputs.c if not given, generates a column with the standard value)<br />
+<code>ffmc</code> : Fine Fuel Moisture Code (number).<br />
+<code>dmc</code> : Duff Moisture Code (number).<br />
+<code>dc</code> : Drought Code (number).<br />
+<code>isi</code> : Initial Spread Index (number).<br />
+<code>bui</code> : Buildup Index (number).<br />
+<code>fwi</code> : Fire Weather Index (number).<br />
+<code>dsr</code> : Daily Severity Rating (number).<br />
+<code>gfmc</code> : Grass Fuel Moisture Code, 0-101 similar to FFMC (number).<br />
+<code>gsi</code> : Grassland Spread Index (number).<br />
+<code>gfwi</code> : Grassland Fire Weather Index (number). </p>
+<p>The hourly FWI2025 outputs can be summarized in a variety of ways, and to inspire users to consider what summaries would be relevant to their situation, a function within the ‘util’ file summarizes the day into some basic metrics. </p>
+<p>The function to generate daily summaries : </p>
+<p>R (found within util.r) :  </p>
+<pre><code class="language-r">generate_daily_summaries &lt;- function(hourly_data) {} 
+</code></pre>
+<p>where : hourly_data = the output dataframe generated by NG_FWI </p>
+<p>Python (found within util.py) : </p>
+<pre><code class="language-python">def generate_daily_summaries(hourly_data): 
+</code></pre>
+<p>where : hourly_data = the output data generated by NG_FWI </p>
+<p>C (found within util.h) : hourly_data = the output dataframe generated by NG_FWI </p>
 <h3 id="functions">Functions</h3>
 <p><a href="r">R</a><br />
 <a href="python">Python</a><br />
