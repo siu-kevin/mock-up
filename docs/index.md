@@ -4,20 +4,20 @@
     style="display: block; 
            margin-left: auto;
            margin-right: auto;
-           width: 300px;
+           width: 500px;
            border-radius: 14px;"
-    src="./img/CFFDRS.png" 
+    src="./img/CFFDRS_banner.png" 
     alt="CFFDRS logo">
 </img>
 
-<img 
+<!-- <img 
     style="display: block;
            margin-left: auto;
            margin-right: auto;
            width: 200px;"
     src="./img/CFS_fire-research_emblem.png" 
     alt="CFS Fire Research emblem">
-</img>
+</img> -->
 
 [introductory tutorial]: getting-started.md
 [User Guide]: user-guide/README.md
