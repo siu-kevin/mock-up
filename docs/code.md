@@ -8,8 +8,13 @@ Code and technical documentation related to the cffdrs-ng code repository. Infor
 
 Note, while some links to the current CFFDRS-1992 and the new CFFDRS-2025 can be found here, more information and publications regarding current and historical CFFDRS documentation can be found on the [NRCan Open S&T Repository (OSTR)](https://ostrnrcan-dostrncan.canada.ca/home).
 
-#### `NG_FWI`
+### Download
 
-#### `make_hourly`
+### Input Parameters
+
+### Functions
+[R](r)  
+[Python](python)  
+[C](c)  
 
 ## License
