@@ -62,7 +62,7 @@ Forest Fire Research Scientist
 Forest Fire Research Scientist  
 [daniel.thompson@nrcan-rncan.gc.ca](mailto:daniel.thompson@NRCan-RNCan.gc.ca)  
 
-**Derek Van Der Kamp**  
+**Derek van der Kamp**  
 Research Scientist  
 [derek.vanderkamp@nrcan-rncan.gc.ca](mailto:Derek.VanDerKamp@NRCan-RNCan.gc.ca)  
 
