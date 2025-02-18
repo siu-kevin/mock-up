@@ -9,20 +9,20 @@ Research Mobilization Analyst
 
 **Jonathan Boucher**  
 Forests Fire Researcher  
-[jonathan.boucher@NRCan-RNCan.gc.ca](mailto:jonathan.boucher@NRCan-RNCan.gc.ca)  
+[jonathan.boucher@nrcan-rncan.gc.ca](mailto:jonathan.boucher@NRCan-RNCan.gc.ca)  
 
 **Luke Collins**  
 Research Scientist  
-[Luke.Collins@NRCan-RNCan.gc.ca](mailto:Luke.Collins@NRCan-RNCan.gc.ca)  
+[luke.collins@nrcan-rncan.gc.ca](mailto:Luke.Collins@NRCan-RNCan.gc.ca)  
 
 **Anne Cotton-Gagnon** (elle, elle | she, her)  
 Forestry Research Officer  
-[anne.cotton-gagnon@NRCan-RNCan.gc.ca](mailto:anne.cotton-gagnon@NRCan-RNCan.gc.ca)  
+[anne.cotton-gagnon@nrcan-rncan.gc.ca](mailto:anne.cotton-gagnon@NRCan-RNCan.gc.ca)  
 
 **Patrick Deane** (he, him | il, lui)  
 Forest Fire Research Specialist  
 Great Lakes Forestry Centre  
-[Patrick.Deane@NRCan-RNCan.gc.ca](mailto:Patrick.Deane@NRCan-RNCan.gc.ca)  
+[patrick.deane@nrcan-rncan.gc.ca](mailto:Patrick.Deane@NRCan-RNCan.gc.ca)  
 
 **Chelene Hanes**  
 Wildland Fire Research Scientist  
@@ -33,20 +33,20 @@ Great Lakes Forestry Centre
 **Natasha Jurko**  
 Physical Fire Scientist  
 Great Lakes Forestry Centre  
-[natasha.jurko@NRCan-RNCan.gc.ca](mailto:natasha.jurko@NRCan-RNCan.gc.ca)  
+[natasha.jurko@nrcan-rncan.gc.ca](mailto:natasha.jurko@NRCan-RNCan.gc.ca)  
 
 **Samuel Lacarte** (he, him | il, lui)  
 Fire Research Officer  
-[samuel.lacarte@NRCan-RNCan.gc.ca](mailto:samuel.lacarte@NRCan-RNCan.gc.ca)  
+[samuel.lacarte@nrcan-rncan.gc.ca](mailto:samuel.lacarte@NRCan-RNCan.gc.ca)  
 
 **Daniel Perrakis**  
 Research Scientist  
-[daniel.perrakis@NRCan-RNCan.gc.ca](mailto:daniel.perrakis@NRCan-RNCan.gc.ca)  
+[daniel.perrakis@nrcan-rncan.gc.ca](mailto:daniel.perrakis@NRCan-RNCan.gc.ca)  
 
 **Mackenzie Simpson**  
 IT Analyst  
 Great Lakes Forestry Centre  
-[mackenzie.simpson@NRCan-RNCan.gc.ca](mailto:mackenzie.simpson@NRCan-RNCan.gc.ca)  
+[mackenzie.simpson@nrcan-rncan.gc.ca](mailto:mackenzie.simpson@NRCan-RNCan.gc.ca)  
 
 **Kevin Siu** (he, him | il, lui)  
 Wildfire Analyst Programmer  
@@ -56,8 +56,8 @@ Great Lakes Forestry Centre
 
 **Steve Taylor**  
 Forest Fire Research Scientist  
-[steve.taylor@NRCan-RNCan.gc.ca](mailto:steve.taylor@NRCan-RNCan.gc.ca)  
+[steve.taylor@nrcan-rncan.gc.ca](mailto:steve.taylor@NRCan-RNCan.gc.ca)  
 
 **Daniel Thompson** (he, him | il, lui)    
 Forest Fire Research Scientist  
-[daniel.thompson@NRCan-RNCan.gc.ca](mailto:daniel.thompson@NRCan-RNCan.gc.ca)  
+[daniel.thompson@nrcan-rncan.gc.ca](mailto:daniel.thompson@NRCan-RNCan.gc.ca)  
