@@ -5,7 +5,7 @@
            margin: auto;
            float: left;
            margin-right: 25px"
-    src="/contact/pdeane.jpg" 
+    src="/mock-up/contact/pdeane.jpg" 
     alt="Patrick Deane">
 </img>
 
