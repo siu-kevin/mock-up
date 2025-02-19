@@ -22,6 +22,7 @@ Forestry Research Officer
 **Patrick Deane** (he, him | il, lui)  
 Forest Fire Research Specialist  
 Great Lakes Forestry Centre  
+[Bio](contact/pdeane.md)  
 [patrick.deane@nrcan-rncan.gc.ca](mailto:Patrick.Deane@NRCan-RNCan.gc.ca)  
 
 **Chelene Hanes**  

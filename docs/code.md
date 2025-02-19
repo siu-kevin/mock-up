@@ -30,7 +30,7 @@ Below describes the files, inputs, formats, and outputs in a general way for all
 
 FWI2025 code was originally written and tested using data tables and comma-separated value (.csv) files as inputs, as a result the output generates simple data tables that can then be exported.  Users can configure the input and output file types to fit their individual data streams.   
 
-The [Tutorial page](/mock-up/tutorials/#how-to-calculate-hourly-fwi-the-new-fwi2025) includes steps to run the code with a publicly available test dataset.
+The [Tutorial page](../tutorials/#how-to-calculate-hourly-fwi-the-new-fwi2025) includes steps to run the code with a publicly available test dataset.
 
 Note on terms:
 
