@@ -166,3 +166,8 @@ code {
     color: #E3D6C9;
     border-radius: 7px;
 }
+
+pre {
+    border: 0px;
+    border-radius: 7px;
+}
