@@ -1,5 +1,26 @@
 {% extends "base.html" %}
 
+{%- block content %}
+    <!-- Redirect Sign -->
+    <style>
+        div.construction p {
+            text-align: center;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-style: solid;
+            border-width: medium;
+        }
+    </style>
+
+    <div class="construction">
+        <p>MOCK-UP IS DEPRECATED, GO TO OFFICIAL SITE INSTEAD: <a href="https://cffdrs.github.io/website_en/" target="_self">cffdrs.github.io/website_en</a></p>
+    </div>
+    <div class="col-md-3">{% include "toc.html" %}</div>
+    <div class="col-md-9" role="main">{% include "content.html" %}</div>
+{%- endblock %}
+
 {%- block site_name %}
     <a class="navbar-brand" href="{{ nav.homepage.url|url }}"> MOCK-UP </a>
     <a class="navbar-brand" href="{{ nav.homepage.url|url }}"> <img style="width: 45px; margin: 0px; padding: 0px;" src="/mock-up/img/CFFDRS_Black_4.png" alt="CFFDRS logo"> </img> </a>

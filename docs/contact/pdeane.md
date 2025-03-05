@@ -1,13 +1,16 @@
-
-<img 
-    style="height: 200px;
-           border-radius: 10px;
-           margin: auto;
-           float: left;
-           margin-right: 25px"
-    src="/mock-up/contact/pdeane.jpg" 
-    alt="Patrick Deane">
-</img>
+<div
+    style="height: 180px;
+                width: 500px;
+                overflow: hidden;
+                border-radius: 10px;
+                float: right;">
+    <img
+        style="margin: -100px 0px 0px 0px;
+                padding: 0px;"
+        src="/contact/pdeane.jpg" 
+        alt="Patrick Deane">
+    </img>
+</div>
 
 ## Patrick Deane
 (he, him | il, lui)  
