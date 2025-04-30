@@ -1,7 +1,5 @@
 ## Newsletter Sign-up
 
-Test- gabrielle was here
-
 ## Fire Danger Group
 
 ### Members
