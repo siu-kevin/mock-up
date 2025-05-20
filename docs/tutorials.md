@@ -4,8 +4,7 @@
 <video width="640" height="360" controls>
   <source src="../img/How_to_make_video.webm" type="video/webm">
 Your browser does not support the video tag.
-</video>  
-
+</video>
 
 ### OneDrive embedded player (Private video)
 
