@@ -1,15 +1,6 @@
 ## Test Video
 
-### Browser player (On public GitHub)
 
-
-### OneDrive embedded player (Private video)
-
-<iframe src="https://041gc-my.sharepoint.com/personal/kevin_siu_nrcan-rncan_gc_ca/_layouts/15/embed.aspx?UniqueId=d61a4a9f-3b7a-4255-ac90-abe7d09c1775&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="How_to_make_video.webm"></iframe>
-
-### OneDrive embedded player (Shared, no download)
-
-<iframe src="https://041gc-my.sharepoint.com/personal/kevin_siu_nrcan-rncan_gc_ca/_layouts/15/embed.aspx?UniqueId=a411218d-4f9c-45b0-99c0-4027c7ed43f6&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="How_to_make_video1.webm"></iframe>
 
 ---
 
