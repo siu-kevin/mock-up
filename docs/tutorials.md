@@ -1,10 +1,7 @@
 ## Test Video
 
 ### Browser player (On public GitHub)
-<video width="640" height="360" controls>
-  <source src="../img/How_to_make_video.webm" type="video/webm">
-Your browser does not support the video tag.
-</video>
+
 
 ### OneDrive embedded player (Private video)
 
