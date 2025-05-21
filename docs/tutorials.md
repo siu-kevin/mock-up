@@ -1,7 +1,5 @@
 ## Test Video
 
-
-
 ---
 
 ## How to calculate hourly FWI – the new FWI2025
